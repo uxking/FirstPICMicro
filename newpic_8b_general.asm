@@ -204,7 +204,7 @@ ISR	CODE    0x0004		; Interrupt vector location
 ; If timer didn't interrupt, the button push must have
 BTN_INT
     banksel	PORTA		; Back to BANK0
-    movf	PORTA, 1	; Read PORTA to itself
+    ;movf	PORTA, F	; Read PORTA to itself
     banksel	PORTB
     movlw	(1<<4)		; Fourth bit
     xorwf	LATB, F		; set the latch for LED
